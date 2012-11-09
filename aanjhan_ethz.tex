@@ -1,0 +1,251 @@
+% Aanjhan Ranganathan's Resume
+% Created: 21 Sep 2006
+% Last Modified: 24 Nov 2007
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Aanjhan Ranganathan}
+\newcommand{\addr}{Steinstrasse 58, 8003 Zurich, Switzerland}
+\newcommand{\phone}{+41 787 462 846}
+\newcommand{\email}{raanjhan@inf.ethz.ch}
+\newcommand{\webaddr}{http://www.syssec.ethz.ch/people/raanjhan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{-1pt} {\small\itshape \hfill \webaddr}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+    \begin{ressubsec}{\'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne, Switzerland}{School of Electronics}{Masters in Electronics and Microelectronics}
+		\ressubitem{CGPA : 5.62/6, graduated in February 2010}
+	\end{ressubsec}
+	\begin{ressubsec}{Anna University}{SSN College of Engineering, Chennai, India}{Bachelors in Electronics and Communication}
+		\ressubitem{Percentage : 82\% (Overall), graduated in April 2005 }
+	\end{ressubsec}
+\end{ressection}
+\rule{\textwidth}{.5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+
+  \begin{ressubsec}{Doctoral Assistant - PhD candidate, System Security Group,
+    ETH Zurich}{}{September 2010--present}
+  \ressubitem{The goal of the research thesis is to investigate techniques for
+    the secure location determination of a wireless device.}
+  \end{ressubsec}
+
+      \begin{ressubsec}{Research Assistant - Processor Architecture
+          Laboratory, EPFL}{}{March 2010--July 2010}
+        \ressubitem{Worked on an extension to the Master thesis on Snoop
+          Filters for Multiprocessor based Embedded Systems. Also assisted in
+          developing a cryptographic hardware platform based on Arduino for
+          performing Differential Power Analysis attacks.}
+       \end{ressubsec}	
+
+    \begin{ressubsec}{Contract Employee, Google Inc. (GSoC)}{}{May 2009--August 2009}
+      \ressubitem{Worked for RTEMS project on Memory Management Unit support.
+        Details can be found in http://www.rtems.org and
+        http://code.google.com/p/rtems-mmu-support/wiki/GSoCFinalReport }
+       \end{ressubsec}	
+	
+	\begin{ressubsec}{Robert Bosch India Ltd. (Car Multimedia Group)}{Bangalore, India}{Senior Engineer:June 2005--June 2008}
+		\ressubitem{Worked for Volkswagen and Audi OE Projects in the Premium
+      Telephone team of three members, responsible for interfacing the car
+      multimedia system with bluetooth enabled handsets. Responsible for
+      requirements Analysis, design, implementation, testing and release.
+      Gained experience in end customer interaction.}
+
+	\end{ressubsec}
+    \newpage
+    \begin{ressubsec}{Teaching Assistant - Microsystems Laboratory (LSM),
+        EPFL}{Switzerland}{October 2009--November 2009}
+	    \ressubitem{Worked as a teaching assistant at the Microsystems laboratory under Prof. Alain Vachoux for Hardware System Modeling and EDA based VLSI design (Semi-Custom part) courses}
+	   
+	\end{ressubsec}
+	\begin{reslist}{Free Software}
+		\ressubitem{Developer and maintainer of GNUSim8085, a 8085 simulator. [http://gnusim8085.sourceforge.net]}
+		\ressubitem{Active member/co-admin of Ubuntu India Community. [https://launchpad.net/people/aanjhan]}
+        \ressubitem{RTEMS Contributor http://www.rtems.com}
+	\end{reslist}
+
+\end{ressection}
+\rule{\textwidth}{.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{ressection}{Skills}
+
+% 	\resitem{\textbf{Operating Systems:} GNU/Linux (Fedora, Debian, Ubuntu), Windows 98/2000/XP}
+% 	\resitem{\textbf{Computer Languages:} Proficient in C, \LaTeX, Perl, Verilog, VHDL, Beginner in Python}
+% 	\resitem{\textbf{Tools:}Version Control Systems, Cadence, Synopsys, Mentor Graphics Toolsets for Digital/Mixed Signal Design}
+% 	\resitem{\textbf{Others:}Familiar 8051 MicroController, NEC V850, Protocols like CAN, McNet, Usage of Hardware Debuggers, XML Driven GUI/Embedded Systems Behaviour}
+% \end{ressection}
+% \rule{\textwidth}{.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Research Papers/Publications/Projects}
+
+  \resitem{\textbf{Enabling Trusted Scheduling in Embedded Systems}, Ramya Jayaram
+    Masti, Claudio Marforio, Aanjhan Ranganathan, Aur\'elien Francillon and
+    Srdjan Capkun in \emph{Proceedings of 28th Annual Computer Security Applications
+    Conference (ACSAC), 2012 (to appear)}}
+
+        \resitem{\textbf{Design and Implementation of a Terrorist-Fraud Resilient
+          Distance Bounding System}, Aanjhan Ranganathan, Nils Ole
+          Tippenhauer, Boris Skoric, Dave Singelee and Srdjan Capkun in \emph{17th
+          European Symposium on Research in Computer Security (ESORICS), 2012}}
+
+        \resitem{\textbf{Counting Stream Registers: An Efficient and Effective Snoop
+          Filter Architecture}, Aanjhan Ranganathan, Ali Bayrak, Theo Kluter,
+          Philip Brisk, Edoardo Charbon and Paolo Ienne in \emph{Proceedings of
+          International Conference on Embedded Systems: Architectures,
+          Modeling and Simulation (SAMOS XII), 2012}}
+
+        \resitem{\textbf{Physical-Layer Attacks on Chirp-based Ranging Systems},
+          Aanjhan Ranganathan, Boris Danev, Aur\'elien Francillon, Srdjan
+          Capkun in \emph{Proceedings of the ACM Conference on Security and Privacy
+          in Wireless and Mobile Networks (WiSec), 2012}}
+
+      \resitem{\textbf{Experimental Analysis of Snoop Filters for MPSoC based
+          Embedded Systems}, \emph{Master Thesis} at Processor Architecture
+        Laboratory, EPFL, Switzerland}
+        
+      \resitem{\textbf{Mounting of Version Control Repositories--RepoFS} at
+        \emph{International IEEE High Performance Computing Conference 2006,
+          Bangalore, INDIA} http://www.hipc.org/hipc2006/posters/repofs.pdf}
+    
+      \resitem{\textbf{Linux and *BSD feasibility study for Automotive
+          Embedded Software} at \emph{SIAT 2007 International Conference at
+          Pune, INDIA (SAE Paper No. 2007-26-057)}}
+
+      \resitem{\textbf{Hybrid Electric vehicle with Intelligent Drive
+          Switching}, presented at IIT Bombay, SAE Student Conference at PSG
+        Tech Coimbatore}
+
+      \resitem{\textbf{Virtual Vision--Module for the Blind}, presented at IIT
+        Bombay [Techfest 2005]}
+\end{ressection}
+\rule{\textwidth}{.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Awards}
+        
+        \resitem{'Young Scientist Award 2004' by the INDIAN SCIENCE MONITOR}
+        \resitem{'Distinguished Alumni' award from SSN Institutions,
+            Chennai, India}
+
+\end{ressection}
+\rule{\textwidth}{.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{ressection}{Activities/Workshops Conducted}
+
+% 	\resitem{``Free and Open Source VLSI CAD Tools'' at Jawaharlal Nehru University, Delhi [http://freed.in]}
+% 	\resitem{``Icarus Verilog and Free/Open Source EDA Tools'' at Indian Institute of Technology Madras.}
+%     \resitem{``Hybrid Electric Vehicle - with Intelligent Drive Switching'' at IIT Bombay [Techfest 2004]}
+%     \resitem{Several others mentioned at http://www.tuxmaniac.com}
+
+    
+% \end{ressection}
+% \rule{\textwidth}{.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%
+% \begin{ressection}{Social Activities}
+
+%         \resitem{Organized and conducted workshops for School/College students on 'Developing Leadership Qualities' as the head of the technical division of 'PEOPLE FIRST', a youth organization.}
+
+%         \resitem{Active Participation in Linux demo Days Conducted by the Chennai Linux users Group in creating Awareness on FLOSS to students in both the semi-urban and urban areas.}
+
+%\end{ressection}
+\end{document}
