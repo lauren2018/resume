@@ -1,0 +1,182 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% for use in bibliography for making it appear bold
+\newcommand{\myname}[1]{\textit{Aanjhan Ranganathan}}
+
+
+% personal data
+\name{Aanjhan}{Ranganathan}
+%\title{Resume}                               % optional, remove / comment the line if not wanted
+\address{Steinstrasse 58}{8003 Zurich}{Switzerland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+41 78 840 7113}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{aanjhan@inf.ethz.ch}                               % optional, remove / comment the line if not wanted
+\homepage{www.aanjhan.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2010--present}{PhD}{ETH Zurich}{Zurich, Switzerland}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2008--2010}{Master of Science}{\'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne}{Lausanne, Switzerland}{\textit{5.62/6}}{}
+\cventry{2001--2005}{Bachelor of Engineering}{SSN College of Engineering (Anna University)}{Chennai, India}{\textit{82/100}}{}
+
+\section{Doctoral Thesis \small{(expected to graduate in 05/2016)} }
+\cvitem{title}{\emph{Physical-layer Techniques for Secure Proximity Verification and Localization}}
+\cvitem{supervisor}{Prof. Dr. Srdjan Capkun}
+\cvitem{description}{Analysed and proposed novel architectures for secure localization and proximity verification. Designed and implemented a spoofing resilient GPS receiver.}
+
+\section{Master thesis}
+\cvitem{title}{\emph{Snoop Filtering for Low Power Embedded Multiprocessor Systems}}
+\cvitem{supervisors}{Prof. Dr. Paolo Ienne, Prof. Dr. Philip Brisk, Dr. Theo Kluter}
+\cvitem{description}{Quantified the benefits of using cache snoop filters to reduce memory subsystem energy in embedded multiprocessor systems.}
+
+%\section{Bachelor thesis}
+%\cvitem{title}{\emph{Design and Analysis OF FIFOs in Advanced Micro-controller Bus Architectures}}
+%\cvitem{supervisors}{Prof. Dr. S. Radha}
+%\cvitem{description}{Designed and analyzed FIFOs and determined the optimum FIFO architecture that can replace the advanced peripheral bridge in ARM processors.}
+
+\section{Experience}
+\subsection{Industry}
+\cventry{June 2005--June 2008}{Senior Software Engineer}{Robert Bosch Engineering and Business Solutions}{Bengaluru, India}{}{}
+
+\subsection{Internships}
+\cventry{March 2010--July 2010}{Research Assistant}{Processor Architecture Laboratory, EPFL}{Lausanne, Switzerland}{}{}
+\cventry{May 2009--August 2009}{Contract Employee}{Google Inc. (Summer of Code)}{}{}{}
+
+\subsection{Teaching}
+\cventry{September 2010--present}{Semester and Master theses supervision}{ETH Zurich}{Zurich, Switzerland}{}{Locating tags using Unmanned Aerial Vehicles, Carl Olsson, Semester Thesis, 2015. Detection of Spoofing Attacks on Wireless Multilateration Systems, Patrick Leu (in co-operation with Armasuisse), Master Thesis, 2015. Detection of GPS Spoofing Attacks, Hildur \'Olafsd\'ottir, Master Thesis, 2014. On the Security of Powerline Communication Systems, Baron Oldenburg, Semester project, 2012. Smart and Secure WiFi Pairing, Pascal Brogle, Masters Thesis, 2011.}
+\cventry{September 2010--present}{Lectures (Masters)}{ETH Zurich}{Zurich, Switzerland}{}{Topics include secure localization, distance bounding, broadcast communication authentication techniques, GPS, Anti-jamming techniques}
+\cventry{September 2010--present}{Teaching Assistant}{ETH Zurich}{Zurich, Switzerland}{}{Design of Digital Circuits (Bachelors), Security of Wireless Networks laboratory (Masters)}
+\cventry{September 2009--December 2009}{Teaching Assistant}{EPFL}{Lausanne, Switzerland}{}{Hardware System Modelling (Masters), Semi-custom EDA based VLSI Design (Masters)}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\section{Talks}
+\cvitem{\listitemsymbol Proximity Verification for Contactless Access Control and Authentication Systems}{Annual Computer Security Applications Conference, Los Angeles, USA, 2015.}
+\cvitem{\listitemsymbol SPREE: A Spoofing Aware GPS Receiver}{University of California, Los Angeles, USA, 2015.}
+\cvitem{\listitemsymbol Thermal Covert Channels on Multicore Platforms}{Usenix Security Symposium, Washington D.C., USA, 2015.}
+\cvitem{\listitemsymbol Design and implementation of a terrorist fraud resilient distance bounding system}{European Symposium on Research in Computer Security, Pisa, Italy, 2012.}
+\cvitem{\listitemsymbol Counting stream registers: An efficient and effective snoop filter architecture}{International Conference on Embedded Computer Systems, Samos, Greece, 2012.}
+\cvitem{\listitemsymbol Physical-layer attacks on chirp-based ranging systems}{ACM Conference on Security and Privacy of Wireless and Mobile Networks, Tucson, USA, 2012.}
+
+\section{Professional and Social Activities}
+
+\cvitem{}{\listitemsymbol Technical Program Committee member for "Smart Medical Devices - from Lab to Clinical Practice" workshop 2015, 2016}
+ 	\cvitem{}{\listitemsymbol Reviewer for IEEE/ACM Transactions on Networking 2015}
+ 	 \cvitem{}{\listitemsymbol Reviewer for ACM Transactions on Embedded Computing Systems (TECS 2015)}
+ 	 \cvitem{}{\listitemsymbol Reviewer for IEEE Journal of Selected Topics in Signal Processing 2014} 
+ 	 \cvitem{}{\listitemsymbol Reviewer for Transactions on Emerging Telecommunications Technologies 2014}
+ 	\cvitem{}{\listitemsymbol ``Free and Open Source VLSI CAD Tools'' at Jawaharlal Nehru University, Delhi [http://freed.in]}
+ 	\cvitem{}{\listitemsymbol ``Icarus Verilog and Free/Open Source EDA Tools'' at Indian Institute of Technology Madras.}
+     \cvitem{}{\listitemsymbol ``Hybrid Electric Vehicle - with Intelligent Drive Switching'' at IIT Bombay [Techfest 2004]}
+     \cvitem{}{\listitemsymbol Organized and conducted workshops for School/College students on 'Developing Leadership Qualities' as the head of the technical division of 'PEOPLE FIRST', a youth organization.}
+     \cvitem{}{\listitemsymbol Developer and maintainer of GNUSim8085, a 8085 simulator. [http://gnusim8085.sourceforge.net]}
+	 \cvitem{}{\listitemsymbol RTEMS Contributor http://www.rtems.com}
+     \cvitem{}{\listitemsymbol Active Participation in Linux demo Days Conducted by the Chennai Linux users Group in creating Awareness on FLOSS to students in both the semi-urban and urban areas.}
+
+\section{Computer skills}
+\cvitem{Programming Languages}{C, Verilog, VHDL, Matlab, Bash, Python, \LaTeX}
+\cvitem{Tools and Platforms}{NEC V850 Emulators, Cadence and Synopsys toolchains, Software Defined Radio platforms, Xilinx and Altera FPGA platforms.}
+
+\section{Awards}
+\cvitem{Young Scientist Award}{awarded by the Indian Science Monitor in 2005}
+\cvitem{Distinguished Alumni Award}{SSN Institutions, Chennai, India}
+
+\section{Languages}
+\cvitem{English, Tamil (Mother tongue)}{Fluent}
+\cvitem{German, Hindi}{Intermediate}
+\cvitem{French, Hungarian}{Basic}
+
+%\section{Interests}
+%\cvitem{Harmonica}{}
+%\cvitem{Reading Non-fiction books}{}
+
+
+%\section{References}
+%
+%Available on request
+
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+%
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
